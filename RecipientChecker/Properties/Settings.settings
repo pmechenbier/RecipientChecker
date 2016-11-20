@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="RecipientChecker.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="FlaggedAddressWords" Type="System.String" Scope="User">
+      <Value Profile="(Default)">mechenbier</Value>
+    </Setting>
+    <Setting Name="DisplayMessage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Hey there cowboy, it looks like you're trying to send an email to everyone. Are you sure everyone's lives will be enriched by reading this message?</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
