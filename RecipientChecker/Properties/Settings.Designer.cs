@@ -25,7 +25,7 @@ namespace RecipientChecker.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("mechenbier")]
+        [global::System.Configuration.DefaultSettingValueAttribute("everyone")]
         public string FlaggedAddressWords {
             get {
                 return ((string)(this["FlaggedAddressWords"]));
