@@ -1,7 +1,7 @@
 # Recipient Checker
 Checks if recipients are in a Outlook email or meeting request item and ensures the user really means to send the item when the <kbd>Send</kbd> button is clicked by asking for user confirmation. Recipients are checked by their display name in the To, CC, and BCC fields.
 
-Recipient Checker supports Microsoft Outlook 2013 and 2016, with support coming for Outlook 2010 and Office 365.
+Recipient Checker supports Microsoft Outlook 2010, 2013, and 2016 clients, with support coming for Office 365.
 
 ## Configuration
 This Outlook Add-in has two configuration options:
