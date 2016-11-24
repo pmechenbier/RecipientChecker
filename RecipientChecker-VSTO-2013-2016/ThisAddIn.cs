@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using Outlook = Microsoft.Office.Interop.Outlook;
+using MicrosoftOutlook = Microsoft.Office.Interop.Outlook;
 
-namespace RecipientChecker
+namespace Xyz.Mechenbier.Outlook.RecipientChecker
 {
     public partial class ThisAddIn
     {
@@ -14,7 +14,7 @@ namespace RecipientChecker
             this.Application.OptionsPagesAdd += Application_OptionsPagesAdd;
         }
 
-        private void Application_OptionsPagesAdd(Outlook.PropertyPages Pages)
+        private void Application_OptionsPagesAdd(MicrosoftOutlook.PropertyPages Pages)
         {
             Pages.Add(new OptionsPage(), "Options");
         }
@@ -23,14 +23,14 @@ namespace RecipientChecker
         {
             List<string> recipients = new List<string>();
             List<string> flaggedAddresses = Properties.Settings.Default.FlaggedAddressWords.Split(';').ToList();
-            Outlook.MailItem mailItem00 = Item as Outlook.MailItem;
-            Outlook.MeetingItem mailItem06 = Item as Outlook.MeetingItem;
-            Outlook.Recipients mailItemRecipients = mailItem00 == null ? null : mailItem00.Recipients;
-            Outlook.Recipients meetingItemRecipients = mailItem06 == null ? null : mailItem06.Recipients;
+            MicrosoftOutlook.MailItem mailItem00 = Item as MicrosoftOutlook.MailItem;
+            MicrosoftOutlook.MeetingItem mailItem06 = Item as MicrosoftOutlook.MeetingItem;
+            MicrosoftOutlook.Recipients mailItemRecipients = mailItem00 == null ? null : mailItem00.Recipients;
+            MicrosoftOutlook.Recipients meetingItemRecipients = mailItem06 == null ? null : mailItem06.Recipients;
 
             if (mailItemRecipients != null)
             {
-                foreach (Outlook.Recipient recipient in mailItemRecipients)
+                foreach (MicrosoftOutlook.Recipient recipient in mailItemRecipients)
                 {
                     recipients.Add(recipient.Name);
                 }
@@ -38,7 +38,7 @@ namespace RecipientChecker
 
             if (meetingItemRecipients != null)
             {
-                foreach (Outlook.Recipient recipient in meetingItemRecipients)
+                foreach (MicrosoftOutlook.Recipient recipient in meetingItemRecipients)
                 {
                     recipients.Add(recipient.Name);
                 }

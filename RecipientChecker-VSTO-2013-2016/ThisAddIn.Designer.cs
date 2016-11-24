@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 #pragma warning disable 414
-namespace RecipientChecker {
+namespace Xyz.Mechenbier.Outlook.RecipientChecker {
     
     
     /// 

@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using Outlook = Microsoft.Office.Interop.Outlook;
+using MicrosoftOutlook = Microsoft.Office.Interop.Outlook;
 
-namespace RecipientChecker
+namespace Xyz.Mechenbier.Outlook.RecipientChecker
 {
     [ComVisible(true)]
-    public partial class OptionsPage : UserControl, Outlook.PropertyPage
+    public partial class OptionsPage : UserControl, MicrosoftOutlook.PropertyPage
     {
-        Outlook.PropertyPageSite _propertyPageSite = null;
+        MicrosoftOutlook.PropertyPageSite _propertyPageSite = null;
         bool _dirty = false;
 
         public OptionsPage()
@@ -46,7 +46,7 @@ namespace RecipientChecker
 
         public void GetPageInfo(ref string HelpFile, ref int HelpContext) { }
 
-        Outlook.PropertyPageSite GetPropertyPageSite()
+        MicrosoftOutlook.PropertyPageSite GetPropertyPageSite()
         {
             Type type = typeof(System.Object);
             string assembly = type.Assembly.CodeBase.Replace("mscorlib.dll", "System.Windows.Forms.dll");
@@ -59,7 +59,7 @@ namespace RecipientChecker
             System.Reflection.MethodInfo methodInfo = oleObj.GetMethod("GetClientSite");
             object propertyPageSite = methodInfo.Invoke(this, null);
 
-            return (Outlook.PropertyPageSite)propertyPageSite;
+            return (MicrosoftOutlook.PropertyPageSite)propertyPageSite;
         }
 
         void OnDirty(bool isDirty)

@@ -1,4 +1,4 @@
-﻿namespace RecipientChecker
+﻿namespace Xyz.Mechenbier.Outlook.RecipientChecker
 {
     partial class OptionsPage
     {
