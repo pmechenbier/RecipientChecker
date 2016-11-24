@@ -22,7 +22,7 @@ namespace Xyz.Mechenbier.Outlook.RecipientChecker
         private void Application_ItemSend(object Item, ref bool Cancel)
         {
             List<string> recipients = new List<string>();
-            List<string> flaggedAddresses = Properties.Settings.Default.FlaggedAddressWords.Split(';').ToList();
+            List<string> flaggedAddresses = Properties.Settings.Default.FlaggedAddressWords.Split(';').Select(x => x.Trim()).ToList();
             MicrosoftOutlook.MailItem mailItem00 = Item as MicrosoftOutlook.MailItem;
             MicrosoftOutlook.MeetingItem mailItem06 = Item as MicrosoftOutlook.MeetingItem;
             MicrosoftOutlook.Recipients mailItemRecipients = mailItem00 == null ? null : mailItem00.Recipients;
