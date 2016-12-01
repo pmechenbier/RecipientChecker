@@ -26,7 +26,7 @@
     <OutputType>Library</OutputType>
     <NoStandardLibraries>false</NoStandardLibraries>
     <RootNamespace>RecipientChecker</RootNamespace>
-    <AssemblyName>RecipientChecker</AssemblyName>
+    <AssemblyName>Recipient Checker</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <DefineConstants>VSTO40</DefineConstants>
     <IsWebBootstrapper>False</IsWebBootstrapper>
@@ -34,16 +34,16 @@
     <PublishUrl>publish\</PublishUrl>
     <InstallUrl />
     <TargetCulture>en</TargetCulture>
-    <ApplicationVersion>1.0.0.1</ApplicationVersion>
+    <ApplicationVersion>1.0.0.2</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>false</UpdateEnabled>
     <UpdateInterval>0</UpdateInterval>
     <UpdateIntervalUnits>days</UpdateIntervalUnits>
     <ProductName>Recipient Checker</ProductName>
     <PublisherName>mechenbier.xyz</PublisherName>
-    <SupportUrl>https://mechenbier.xyz</SupportUrl>
-    <FriendlyName>Recipient Checker</FriendlyName>
-    <OfficeApplicationDescription>Checks to see if a recipient is in a email/meeting request and warns the user before sending the item.</OfficeApplicationDescription>
+    <SupportUrl>https://github.com/prmech/RecipientChecker</SupportUrl>
+    <FriendlyName>Recipient Checker %282013%29</FriendlyName>
+    <OfficeApplicationDescription>Checks if recipients are in a Microsoft Outlook mail/meeting request item and ensures the user really means to send the item.</OfficeApplicationDescription>
     <LoadBehavior>3</LoadBehavior>
   </PropertyGroup>
   <ItemGroup>
@@ -226,10 +226,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>RecipientChecker_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>RecipientChecker-VSTO-2013-2016_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>40495A6A6326A9BF0DB3B959B0BAD9E51FB90E29</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>D2A0FB849D056983399B1AAAD3A16C3E8204DF0C</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
@@ -246,8 +246,8 @@
     <VisualStudio>
       <FlavorProperties GUID="{BAA0C2D2-18E2-41B9-852F-F413020CAA33}">
         <ProjectProperties HostName="Outlook" HostPackage="{29A7B9D7-A7F1-4328-8EF0-6B2D1A56B2C1}" OfficeVersion="15.0" VstxVersion="4.0" ApplicationType="Outlook" Language="cs" TemplatesPath="" DebugInfoExeName="#Software\Microsoft\Office\16.0\Outlook\InstallRoot\Path#outlook.exe" AddItemTemplatesGuid="{A58A78EB-1C92-4DDD-80CF-E8BD872ABFC4}" />
-        <Host Name="Outlook" GeneratedCodeNamespace="RecipientChecker" PublishedHash="69C324AB27932AA2FBF2B7EA72250886FF164DE6" IconIndex="0">
-          <HostItem Name="ThisAddIn" Code="ThisAddIn.cs" CanonicalName="AddIn" CanActivate="false" IconIndex="1" Blueprint="ThisAddIn.Designer.xml" GeneratedCode="ThisAddIn.Designer.cs" PublishedHash="FC5F7D0AD22A00EA4B992FEA0C7604E49E11AFE0" />
+        <Host Name="Outlook" GeneratedCodeNamespace="Xyz.Mechenbier.Outlook.RecipientChecker" PublishedHash="69C324AB27932AA2FBF2B7EA72250886FF164DE6" IconIndex="0">
+          <HostItem Name="ThisAddIn" Code="ThisAddIn.cs" CanonicalName="AddIn" PublishedHash="F2D6F0607B1A844FED1FF8CDCE88E47F0DF8C669" CanActivate="false" IconIndex="1" Blueprint="ThisAddIn.Designer.xml" GeneratedCode="ThisAddIn.Designer.cs" />
         </Host>
       </FlavorProperties>
     </VisualStudio>

@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 [assembly: AssemblyTitle("Recipient Checker")]
 [assembly: AssemblyDescription("An Outlook plugin that checks if a recipient is part of an email/meeting request")]
-[assembly: AssemblyConfiguration("release")]
+[assembly: AssemblyConfiguration("Release")]
 [assembly: AssemblyCompany("mechenbier.xyz")]
 [assembly: AssemblyProduct("Recipient Checker")]
 [assembly: AssemblyCopyright("Copyright © 2016 Patrick Mechenbier")]
